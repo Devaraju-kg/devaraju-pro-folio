@@ -5,7 +5,7 @@ import {
   Moon, Sun, Github, Linkedin, Mail, Phone, MapPin, Download, ArrowUp,
   Code2, Database, Brain, Link2, BarChart3, Wrench, Globe, Server,
   GraduationCap, Briefcase, FileText, Award, ExternalLink, Send,
-  Sparkles, ChevronRight, Menu, X, Cpu, Shield, FileBadge2, Trophy,
+  Sparkles, ChevronRight, Menu, X, Cpu, Shield, FileBadge2, Trophy, ShieldCheck,
 } from "lucide-react";
 import profilePhoto from "@/assets/profile.jpg";
 
@@ -13,7 +13,7 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Devaraju K G — Python Developer · AI · Blockchain · Analytics" },
-      { name: "description", content: "Final-year MCA student building secure, intelligent, data-driven software with Python, AI, Blockchain and modern web technologies." },
+      { name: "description", content: "Final-year MCA student specializing in Python Development, Artificial Intelligence, Blockchain, Data Analytics, and Software Engineering." },
       { property: "og:title", content: "Devaraju K G — Portfolio" },
       { property: "og:description", content: "Python · AI · Blockchain · Data Analytics" },
     ],
@@ -63,7 +63,7 @@ function Nav() {
       <div className={`mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 ${scrolled ? "" : ""}`}>
         <div className={`flex items-center justify-between rounded-2xl px-4 sm:px-5 py-3 transition-all ${scrolled ? "glass shadow-elegant" : ""}`}>
           <a href="#home" className="flex items-center gap-2 font-display font-bold">
-            <span className="grid h-8 w-8 place-items-center rounded-lg bg-gradient-to-br from-gold to-gold-soft text-primary-foreground shadow-gold">
+            <span className="grid h-9 w-9 place-items-center rounded-lg bg-gradient-to-br from-gold to-gold-soft text-primary-foreground shadow-gold">
               D
             </span>
             <span className="hidden sm:inline">Devaraju<span className="text-gradient-gold">.</span></span>
@@ -139,7 +139,7 @@ function SectionTitle({ eyebrow, title, sub }: { eyebrow: string; title: string;
 }
 
 /* ---------- Hero ---------- */
-const ROLES = ["Python Developer", "AI Enthusiast", "Blockchain Developer", "Data Analytics Enthusiast"];
+const ROLES = ["Python Developer", "AI & Machine Learning Enthusiast", "Blockchain Developer", "Data Analytics Enthusiast", "Backend Developer", "Open to Software Engineer Roles"];
 
 function Typer() {
   const [i, setI] = useState(0);
@@ -172,7 +172,7 @@ function Hero() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full hairline px-3 py-1 text-xs">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              Open to opportunities · MCA · Final Year
+              Available for Full-Time Software Engineer Roles • MCA Final Year
             </div>
           </Reveal>
           <Reveal delay={0.05}>
@@ -188,9 +188,11 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-5 max-w-xl text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Building secure, intelligent and data-driven software solutions using
-              <span className="text-foreground"> AI</span>,
-              <span className="text-foreground"> Blockchain</span> and modern technologies.
+              Final-year MCA student at RNS Institute of Technology passionate about building secure, intelligent, and scalable software solutions using
+              <span className="text-foreground"> Python</span>,
+              <span className="text-foreground"> Artificial Intelligence</span>,
+              <span className="text-foreground"> Blockchain</span>, and
+              <span className="text-foreground"> Data Analytics</span>.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -208,11 +210,11 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.25}>
             <div className="mt-10 flex items-center gap-5 text-muted-foreground">
-              <a href="https://github.com" aria-label="GitHub" className="hover:text-foreground transition"><Github className="h-5 w-5" /></a>
-              <a href="https://linkedin.com" aria-label="LinkedIn" className="hover:text-foreground transition"><Linkedin className="h-5 w-5" /></a>
-              <a href="mailto:devaraju@example.com" aria-label="Email" className="hover:text-foreground transition"><Mail className="h-5 w-5" /></a>
+              <a href="https://github.com/devarajukgmca021" aria-label="GitHub" className="hover:text-foreground transition"><Github className="h-5 w-5" /></a>
+              <a href="https://www.linkedin.com/in/devaraju-k-g" aria-label="LinkedIn" className="hover:text-foreground transition"><Linkedin className="h-5 w-5" /></a>
+              <a href="mailto:devarajgowda396@gmail.com" aria-label="Email" className="hover:text-foreground transition"><Mail className="h-5 w-5" /></a>
               <div className="h-px flex-1 max-w-[120px] bg-border" />
-              <span className="text-xs">Karnataka, India</span>
+              <span className="text-xs">Bengaluru, Karnataka, India</span>
             </div>
           </Reveal>
         </div>
@@ -235,7 +237,7 @@ function Hero() {
               animate={{ y: [0, -8, 0] }} transition={{ duration: 4, repeat: Infinity }}
               className="absolute -top-2 -left-4 glass rounded-xl px-3 py-2 text-xs font-medium shadow-elegant"
             >
-              <span className="text-gold">●</span> Python · AI
+              <span className="text-gold">●</span> Python • AI • Backend
             </motion.div>
             <motion.div
               animate={{ y: [0, 8, 0] }} transition={{ duration: 4, repeat: Infinity, delay: 1 }}
@@ -252,32 +254,31 @@ function Hero() {
 
 /* ---------- About ---------- */
 const TIMELINE = [
-  { year: "2020–2023", title: "BCA", place: "Bachelor of Computer Applications", icon: GraduationCap },
-  { year: "2023–2025", title: "MCA", place: "Master of Computer Applications · Final Year", icon: GraduationCap },
-  { year: "2024", title: "Internship", place: "Data Analytics Intern", icon: Briefcase },
-  { year: "2025", title: "Research Paper", place: "AI · Blockchain Voting · Accepted", icon: FileText },
-  { year: "2025", title: "MATA RAKSHA", place: "AI-Enhanced Biometric Voting System", icon: Shield },
-  { year: "Now", title: "Career", place: "Seeking SDE / Python roles", icon: Briefcase },
+  { year: "2021–2024", title: "BCA", place: "Bachelor of Computer Applications, Bangalore University", icon: GraduationCap },
+  { year: "2024–2026", title: "MCA", place: "Master of Computer Applications, RNS Institute of Technology, (Current Final Year)", icon: GraduationCap },
+  { year: "2026", title: "Internship", place: "Data Analytics Intern, Anudip Foundation", icon: Briefcase },
+  { year: "2026", title: "Research Paper", place: "AI-Assisted Biometric Blockchain-Based Secure Digital Voting System with Anomaly Detection · Accepted", icon: FileText },
+  { year: "Now", title: "Career", place: "Open for Software Development Roles", icon: Briefcase },
 ];
 
 const STATS = [
-  { label: "CGPA", value: "8.7", suffix: "/10" },
+  { label: "CGPA", value: "8.38", suffix: "/10" },
   { label: "Research Papers", value: "1" },
   { label: "Internships", value: "1" },
-  { label: "Projects", value: "8", suffix: "+" },
-  { label: "Languages", value: "5", suffix: "+" },
+  { label: "Major Projects", value: "3", suffix: "+" },
+  { label: "Technologies", value: "20", suffix: "+" },
+  { label: "Programming Languages", value: "5", suffix: "+" },
 ];
 
 function About() {
   return (
     <section id="about" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="About" title="Engineer at heart, researcher by curiosity" sub="Final-year MCA student combining software engineering, AI and blockchain to build solutions that are secure, scalable and meaningful." />
+        <SectionTitle eyebrow="About" title="Building Intelligent Software for Real-World Problems" sub="I am a final-year Master of Computer Applications (MCA) student at RNS Institute of Technology, Bengaluru. My interests include Python Development, Artificial Intelligence, Blockchain, Backend Development, and Data Analytics. I enjoy designing secure software systems that solve real-world challenges using modern technologies." />
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12">
           <Reveal>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
-              <p>I'm <span className="text-foreground font-medium">Devaraju K G</span>, a Python developer with a strong interest in applied AI, blockchain systems and data analytics. My academic and project work focuses on building <span className="text-foreground">secure, intelligent</span> systems — from biometric blockchain voting to credit risk analytics dashboards.</p>
-              <p>I value clean engineering, careful research and software that actually solves problems. Currently exploring opportunities in software development, data and ML engineering roles.</p>
+              <p>My projects focus on <span className="text-foreground">secure biometric authentication, blockchain-based voting systems, and business intelligence dashboards.</span> I continuously explore emerging technologies and enjoy turning ideas into practical software solutions.</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 {STATS.map((s) => (
                   <div key={s.label} className="rounded-2xl hairline p-4 bg-card/50">
@@ -313,21 +314,21 @@ function About() {
 
 /* ---------- Skills ---------- */
 const SKILLS = [
-  { icon: Code2, title: "Programming", items: ["Python", "SQL", "Java"] },
-  { icon: Globe, title: "Frontend", items: ["HTML", "CSS", "JavaScript", "React", "Tailwind"] },
-  { icon: Server, title: "Backend", items: ["Flask", "FastAPI"] },
+  { icon: Code2, title: "Programming", items: ["Python", "C", "SQL", "Java", "JavaScript"] },
+  { icon: Globe, title: "Frontend", items: ["HTML5", "CSS3", "JavaScript", "React"] },
+  { icon: Server, title: "Backend", items: ["Flask", "FastAPI", "REST API"] },
   { icon: Database, title: "Database", items: ["MySQL", "SQLite"] },
-  { icon: Brain, title: "AI / ML", items: ["Pandas", "NumPy", "Scikit-Learn"] },
-  { icon: Link2, title: "Blockchain", items: ["Solidity", "Web3.py", "Ganache"] },
-  { icon: BarChart3, title: "Analytics", items: ["Power BI", "Excel", "DAX"] },
-  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code"] },
+  { icon: Brain, title: "AI / ML", items: ["Pandas", "NumPy", "Scikit-Learn", "OpenCV"] },
+  { icon: Link2, title: "Blockchain", items: ["Solidity", "Web3.py", "Ganache", "Smart Contracts"] },
+  { icon: BarChart3, title: "Analytics", items: ["Power BI", "Excel", "DAX", "Power Query"] },
+  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code", "Postman", "Jupyter Notebook"] },
 ];
 
 function Skills() {
   return (
     <section id="skills" className="py-24 sm:py-32 bg-surface/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="Skills" title="A focused, modern toolbox" sub="Hands-on across the stack — from data and ML to backend services, smart contracts and analytics dashboards." />
+        <SectionTitle eyebrow="Skills" title="Technical Skills & Technologies" sub="Hands-on experience in software development, AI, blockchain, backend systems, databases, and business intelligence using modern tools and technologies." />
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {SKILLS.map((s, i) => {
             const Icon = s.icon;
@@ -362,12 +363,29 @@ type Project = {
 const PROJECTS: Project[] = [
   {
     title: "MATA RAKSHA",
-    tag: "Featured · AI + Blockchain",
-    desc: "AI-Enhanced Biometric Blockchain Voting System combining fingerprint authentication, smart-contract-based vote storage and ML anomaly detection for transparent, tamper-proof elections.",
-    features: ["Fingerprint Authentication", "Blockchain Voting", "AI Anomaly Detection", "Election Management", "Role-Based Login"],
-    stack: ["Python", "Solidity", "Web3.py", "Ganache", "SQLite", "CustomTkinter"],
+    tag: "Flagship Project • AI + Blockchain",
+    desc: "Developed a secure desktop-based electronic voting system integrating biometric fingerprint authentication, blockchain technology, smart contracts, and AI-assisted anomaly detection to ensure transparent, tamper-proof, and fraud-resistant elections.",
+    features: [
+"Fingerprint Authentication",
+"Blockchain Vote Storage",
+"Smart Contract Integration",
+"AI Anomaly Detection",
+"Role-Based Access Control",
+"Election Management",
+"Candidate Management",
+"Real-Time Vote Counting"
+],
+    stack: [
+"Python",
+"SQLite",
+"Web3.py",
+"Ganache",
+"Solidity",
+"CustomTkinter",
+"Scikit-learn"
+],
     links: [
-      { label: "GitHub", href: "https://github.com", icon: Github },
+      { label: "GitHub", href: "https://github.com/devarajukgmca021/MATA-RAKSHA", icon: Github },
       { label: "Architecture", href: "#" },
       { label: "Docs", href: "#" },
     ],
@@ -376,19 +394,19 @@ const PROJECTS: Project[] = [
   },
   {
     title: "Credit Risk Analytics Dashboard",
-    tag: "Data Analytics · Internship",
-    desc: "Interactive Power BI dashboard for customer credit risk analysis with DAX measures, drilldowns and Python-powered preprocessing pipelines.",
-    features: ["Customer segmentation", "Risk scoring", "DAX KPIs", "Drilldown filters"],
+    tag: "Internship Project • Business Intelligence",
+    desc: "Designed an interactive Power BI dashboard to analyze customer credit risk using Python, SQL, Power BI, DAX, and Excel for business intelligence and data-driven decision-making.",
+    features: ["Customer segmentation", "Credit Risk Analysis", "Interactive Dashboards", "DAX Measures", "Power Query", "Data Cleaning"],
     stack: ["Power BI", "Python", "MySQL", "DAX", "Excel"],
-    links: [{ label: "GitHub", href: "https://github.com", icon: Github }],
+    links: [{ label: "GitHub", href: "https://github.com/devarajukgmca021/Credit-Risk-Analytics-Dashboard", icon: Github }],
     icon: BarChart3,
   },
   {
-    title: "Hotel Management System",
+    title: "Smart Hotel Management System",
     tag: "Desktop App",
-    desc: "Python desktop application for end-to-end hotel operations — reservations, billing, guest management and operational reports.",
-    features: ["Reservations", "Billing", "Guest Management", "Reports"],
-    stack: ["Python", "Tkinter", "SQLite"],
+    desc: "Developed a desktop-based hotel management application for room booking, guest management, billing, staff administration, and reporting with an intuitive user interface.",
+    features: ["Room Booking", "Billing", "Guest Management", "Reports", "Authentication", "Database Management"],
+    stack: ["Python", "Tkinter", "SQLite", "OOP"],
     links: [{ label: "GitHub", href: "https://github.com", icon: Github }],
     icon: Cpu,
   },
@@ -407,8 +425,8 @@ function Projects() {
             <div className="inline-flex items-center gap-2 rounded-full hairline px-3 py-1 text-xs">
               <Sparkles className="h-3 w-3 text-gold" /> Projects
             </div>
-            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">Selected work</h2>
-            <p className="mt-3 text-muted-foreground max-w-xl">Engineering, research and analytics projects shipped across academia and internship.</p>
+            <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl font-bold">Featured Projects</h2>
+            <p className="mt-3 text-muted-foreground max-w-xl">A collection of software engineering, AI, blockchain, and data analytics projects demonstrating practical problem-solving and real-world application development.</p>
           </div>
           <input
             value={query}
@@ -454,9 +472,9 @@ function Projects() {
                   <div className="text-center p-6">
                     <Shield className="h-16 w-16 text-gold mx-auto mb-4" />
                     <div className="font-display font-bold text-2xl text-gradient-gold">MATA RAKSHA</div>
-                    <div className="text-sm text-muted-foreground mt-2">Biometric · Blockchain · AI</div>
+                    <div className="text-sm text-muted-foreground mt-2">AI • Biometric • Blockchain</div>
                     <div className="mt-6 grid grid-cols-3 gap-2 text-xs">
-                      {["Fingerprint", "Smart Contract", "Anomaly ML"].map(x => (
+                      {["Fingerprint", "Smart Contract", "Blockchain", "AI Detection"].map(x => (
                         <div key={x} className="rounded-lg hairline py-2">{x}</div>
                       ))}
                     </div>
@@ -505,35 +523,104 @@ function Research() {
   return (
     <section id="research" className="py-24 sm:py-32 bg-surface/50">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="Research" title="Published research" sub="Bridging AI, biometrics and blockchain for trustworthy digital systems." />
+
+        <SectionTitle
+          eyebrow="Research"
+          title="Research Contribution"
+          sub="Exploring the integration of Artificial Intelligence, Biometrics and Blockchain for secure digital voting."
+        />
+
         <Reveal>
           <div className="rounded-3xl hairline bg-card p-6 sm:p-10 relative overflow-hidden">
+
             <div className="absolute top-0 right-0 h-40 w-40 bg-gold/10 blur-3xl rounded-full" />
-            <div className="flex flex-wrap items-center gap-2 mb-4">
+
+            <div className="flex flex-wrap items-center gap-2 mb-5">
+
               <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 text-xs font-medium">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" /> Conference Accepted
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+                Conference Accepted
               </span>
-              <span className="rounded-full hairline px-3 py-1 text-xs text-muted-foreground">Publication in Progress</span>
+
+              <span className="rounded-full hairline px-3 py-1 text-xs text-muted-foreground">
+                Registration on Hold
+              </span>
+
             </div>
-            <h3 className="text-2xl sm:text-3xl font-bold leading-tight max-w-3xl">
+
+            <h3 className="text-2xl sm:text-3xl font-bold leading-tight max-w-4xl">
               AI-Assisted Biometric Blockchain-Based Secure Digital Voting System with Anomaly Detection
             </h3>
-            <p className="mt-5 text-muted-foreground leading-relaxed max-w-3xl">
-              <span className="font-semibold text-foreground">Abstract — </span>
-              We propose a hybrid voting framework that combines fingerprint biometric authentication, Ethereum-compatible smart contracts for immutable vote recording, and machine-learning-based anomaly detection to identify suspicious voting patterns in real time. The system aims to improve transparency, voter verifiability and resilience against tampering compared to traditional EVM-based deployments.
+
+            <p className="mt-5 text-muted-foreground leading-relaxed max-w-4xl">
+              <span className="font-semibold text-foreground">
+                Research Summary —
+              </span>{" "}
+              This research extends the MATA RAKSHA project by integrating
+              fingerprint biometric authentication, blockchain-based secure vote
+              recording and AI-driven anomaly detection into a unified digital
+              voting framework. The proposed architecture aims to improve
+              election transparency, voter authentication and tamper resistance
+              while providing a scalable solution for secure electronic voting.
+              The paper has received conference acceptance, while the
+              registration and publication decision is currently on hold.
             </p>
+
             <div className="mt-6 flex flex-wrap gap-2">
-              {["Biometrics", "Blockchain", "Smart Contracts", "Anomaly Detection", "E-Voting", "Security"].map(k => (
-                <span key={k} className="text-xs px-2.5 py-1 rounded-md bg-muted font-mono">{k}</span>
+              {[
+                "Artificial Intelligence",
+                "Blockchain",
+                "Biometrics",
+                "Machine Learning",
+                "Cyber Security",
+                "E-Voting",
+              ].map((k) => (
+                <span
+                  key={k}
+                  className="text-xs px-2.5 py-1 rounded-md bg-muted font-mono"
+                >
+                  {k}
+                </span>
               ))}
             </div>
-            <div className="mt-8 flex flex-wrap gap-2">
-              <a href="#" className="inline-flex items-center gap-1.5 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"><FileText className="h-4 w-4"/> Read Abstract</a>
-              <a href="#" className="inline-flex items-center gap-1.5 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"><FileBadge2 className="h-4 w-4"/> Paper</a>
-              <a href="#" className="inline-flex items-center gap-1.5 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"><Award className="h-4 w-4"/> Acceptance Certificate</a>
+
+            <div className="mt-8 flex flex-wrap gap-3">
+
+              <a
+                href="/Research_Paper.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
+              >
+                <FileText className="h-4 w-4" />
+                Research Paper
+              </a>
+
+              <a
+                href="/Conference_Acceptance_Email.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
+              >
+                <Award className="h-4 w-4" />
+                Conference Acceptance
+              </a>
+
+              <a
+                href="https://github.com/devarajukgmca021/MATA-RAKSHA"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
+              >
+                <Github className="h-4 w-4" />
+                View Project
+              </a>
+
             </div>
+
           </div>
         </Reveal>
+
       </div>
     </section>
   );
@@ -544,195 +631,626 @@ function Experience() {
   return (
     <section id="experience" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="Experience" title="Internship" />
+
+        <SectionTitle
+          eyebrow="Experience"
+          title="Professional Experience"
+          sub="Hands-on experience in data analytics, business intelligence and dashboard development."
+        />
+
         <Reveal>
           <div className="rounded-3xl hairline bg-card p-6 sm:p-10 grid lg:grid-cols-[1fr_2fr] gap-8">
+
+            {/* Left Side */}
+
             <div>
+
               <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-gold to-gold-soft text-primary-foreground shadow-gold mb-4">
                 <Briefcase className="h-6 w-6" />
               </div>
-              <div className="text-xs text-muted-foreground font-mono">2024</div>
-              <h3 className="mt-1 text-xl font-bold">Data Analytics Intern</h3>
-              <div className="text-sm text-muted-foreground">Tech Solutions · Remote</div>
-              <div className="mt-4 flex flex-wrap gap-1.5">
-                {["Power BI", "Python", "MySQL", "DAX"].map(s => (
-                  <span key={s} className="text-xs px-2 py-0.5 rounded-md bg-muted font-mono">{s}</span>
+
+              <div className="text-xs text-muted-foreground font-mono">
+                Jan 2026 – Apr 2026
+              </div>
+
+              <h3 className="mt-2 text-xl font-bold">
+                Data Visualization Intern
+              </h3>
+
+              <div className="text-sm text-muted-foreground">
+                Anudip Foundation • DeepTech Program
+              </div>
+
+              <div className="mt-5 flex flex-wrap gap-2">
+                {[
+                  "Power BI",
+                  "Python",
+                  "MySQL",
+                  "Excel",
+                  "DAX",
+                ].map((s) => (
+                  <span
+                    key={s}
+                    className="text-xs px-2 py-1 rounded-md bg-muted font-mono"
+                  >
+                    {s}
+                  </span>
                 ))}
               </div>
+
             </div>
+
+            {/* Right Side */}
+
             <div>
-              <h4 className="font-semibold mb-2">Project · Credit Risk Analytics Dashboard</h4>
-              <p className="text-muted-foreground leading-relaxed text-sm">
-                Designed and delivered an interactive Power BI dashboard for retail credit-risk analysis. Built data ingestion pipelines in Python, modeled risk-scoring KPIs in DAX and created drilldown views for portfolio managers.
+
+              <h4 className="font-semibold text-lg">
+                Project • Credit Risk Analytics Dashboard
+              </h4>
+
+              <p className="mt-3 text-muted-foreground leading-relaxed">
+                Successfully completed a 90-day internship focused on
+                business intelligence, data visualization and analytics.
+                Developed an interactive Credit Risk Analytics Dashboard
+                using Power BI, Python and MySQL to analyze customer
+                creditworthiness, automate reporting and generate
+                business insights.
               </p>
-              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+
+              <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
+
                 {[
-                  "Reduced manual reporting effort by automating ETL pipelines",
-                  "Implemented customer segmentation and risk-tier KPIs",
-                  "Delivered interactive drilldowns for portfolio analysts",
-                ].map(a => (
-                  <li key={a} className="flex gap-2"><ChevronRight className="h-4 w-4 text-gold flex-shrink-0 mt-0.5" /> {a}</li>
+                  "Developed an interactive Credit Risk Analytics Dashboard using Power BI.",
+                  "Performed data cleaning and preprocessing using Python.",
+                  "Created DAX measures, KPIs and business reports.",
+                  "Connected MySQL database for data extraction and transformation.",
+                  "Designed interactive dashboards with drill-down analysis.",
+                  "Improved reporting efficiency through automated analytics."
+                ].map((item) => (
+
+                  <li key={item} className="flex gap-2">
+
+                    <ChevronRight className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
+
+                    {item}
+
+                  </li>
+
                 ))}
+
               </ul>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+
+                <a
+                  href="https://github.com/devarajukgmca021/Credit-Risk-Analytics-Dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
+                >
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+
+                <a
+                  href="/Internship_Report.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
+                >
+                  <FileText className="h-4 w-4" />
+                  Internship Report
+                </a>
+
+                <a
+                  href="/Internship_Certificate.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
+                >
+                  <Award className="h-4 w-4" />
+                  Completion Certificate
+                </a>
+
+              </div>
+
             </div>
+
           </div>
         </Reveal>
+
       </div>
     </section>
   );
 }
 
 /* ---------- Achievements ---------- */
-function Counter({ to, suffix = "" }: { to: number; suffix?: string }) {
+
+function Counter({
+  to,
+  suffix = "",
+}: {
+  to: number;
+  suffix?: string;
+}) {
   const ref = useRef<HTMLSpanElement>(null);
   const inView = useInView(ref, { once: true });
   const [n, setN] = useState(0);
+
   useEffect(() => {
     if (!inView) return;
+
     let raf = 0;
     const start = performance.now();
+
     const tick = (t: number) => {
       const p = Math.min(1, (t - start) / 1200);
       setN(Math.round(p * to));
-      if (p < 1) raf = requestAnimationFrame(tick);
+
+      if (p < 1) {
+        raf = requestAnimationFrame(tick);
+      }
     };
+
     raf = requestAnimationFrame(tick);
+
     return () => cancelAnimationFrame(raf);
   }, [inView, to]);
-  return <span ref={ref}>{n}{suffix}</span>;
+
+  return (
+    <span ref={ref}>
+      {n}
+      {suffix}
+    </span>
+  );
 }
 
+/* ---------------- Achievement Data ---------------- */
+
 const ACHIEVEMENTS = [
-  { icon: FileText, title: "Research Paper Accepted", desc: "AI + Blockchain voting framework accepted at international conference." },
-  { icon: Trophy, title: "TCS NQT Qualified", desc: "Cleared the TCS National Qualifier Test." },
-  { icon: Briefcase, title: "Internship Completed", desc: "Data analytics internship with shipped Power BI dashboard." },
-  { icon: BarChart3, title: "Power BI Dashboard", desc: "Built and deployed a real-world risk-scoring dashboard." },
-  { icon: Shield, title: "Blockchain Project", desc: "Designed end-to-end biometric blockchain voting prototype." },
+  {
+    icon: Award,
+    title: "Outstanding Project Award",
+    desc: "Awarded by the Department of MCA, RNS Institute of Technology for the Credit Risk Analytics Dashboard project.",
+  },
+
+  {
+    icon: FileBadge2,
+    title: "Research Paper Accepted",
+    desc: "Research paper on AI-assisted biometric blockchain voting accepted for presentation at an international conference.",
+  },
+
+  {
+    icon: ShieldCheck,
+    title: "AI Data Quality Analyst",
+    desc: "Successfully completed the Skill India & NASSCOM AI Data Quality Analyst certification.",
+  },
+
+  {
+    icon: Globe,
+    title: "Front-End Web Developer",
+    desc: "Completed Front-End Web Developer certification covering HTML, CSS, JavaScript and responsive web development.",
+  },
+
+  {
+    icon: Server,
+    title: "Cloud Computing",
+    desc: "Completed Cloud Computing certification covering cloud fundamentals and deployment concepts.",
+  },
+
+  {
+    icon: Briefcase,
+    title: "Data Analytics Internship",
+    desc: "Completed Data Analytics internship involving Power BI, Python, SQL and business intelligence reporting.",
+  },
+
+  {
+    icon: BarChart3,
+    title: "Credit Risk Analytics Dashboard",
+    desc: "Built an interactive Power BI dashboard for financial credit risk analysis using Python, SQL and DAX.",
+  },
+
+  {
+    icon: Shield,
+    title: "MATA RAKSHA",
+    desc: "Developed an AI-enhanced biometric blockchain voting system integrating fingerprint authentication and smart contracts.",
+  },
+
+  {
+    icon: Trophy,
+    title: "Open Source Portfolio",
+    desc: "Designed and deployed a modern responsive portfolio showcasing projects, research and certifications using React and TypeScript.",
+  },
 ];
+
+/* ---------------- Component ---------------- */
 
 function Achievements() {
   const counters = [
-    { label: "Projects", to: 8, suffix: "+" },
-    { label: "Research", to: 1 },
-    { label: "Internships", to: 1 },
-    { label: "Technologies", to: 20, suffix: "+" },
+    {
+      label: "Projects",
+      to: 8,
+      suffix: "+",
+    },
+
+    {
+      label: "Research Papers",
+      to: 1,
+    },
+
+    {
+      label: "Internships",
+      to: 1,
+    },
+
+    {
+      label: "Certifications",
+      to: 15,
+      suffix: "+",
+    },
   ];
+
   return (
-    <section id="achievements" className="py-24 sm:py-32 bg-surface/50">
+    <section
+      id="achievements"
+      className="py-24 sm:py-32 bg-surface/50"
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="Achievements" title="Milestones so far" />
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-          {counters.map(c => (
+
+        <SectionTitle
+          eyebrow="Achievements"
+          title="Awards & Professional Milestones"
+          sub="Recognition earned through academic excellence, research, internships, certifications and real-world software projects."
+        />
+
+        {/* Counter Cards */}
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-5 mb-12">
+
+          {counters.map((c) => (
+
             <Reveal key={c.label}>
-              <div className="rounded-2xl hairline bg-card p-6 text-center">
+
+              <div
+                className="
+                rounded-2xl
+                hairline
+                bg-card
+                p-6
+                text-center
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-2xl
+                hover:border-primary/30
+                "
+              >
+
                 <div className="text-4xl font-display font-bold text-gradient-gold">
-                  <Counter to={c.to} suffix={c.suffix} />
+
+                  <Counter
+                    to={c.to}
+                    suffix={c.suffix}
+                  />
+
                 </div>
-                <div className="text-xs text-muted-foreground mt-1 uppercase tracking-wider">{c.label}</div>
+
+                <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">
+
+                  {c.label}
+
+                </div>
+
               </div>
+
             </Reveal>
+
           ))}
+
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+
+        {/* Achievement Cards */}
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
           {ACHIEVEMENTS.map((a, i) => (
-            <Reveal key={a.title} delay={i * 0.05}>
-              <div className="rounded-2xl hairline bg-card p-6 h-full hover:-translate-y-1 transition">
-                <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-gold/20 to-transparent text-gold mb-3">
-                  <a.icon className="h-5 w-5" />
+
+            <Reveal
+              key={a.title}
+              delay={i * 0.05}
+            >
+
+              <div
+                className="
+                group
+                rounded-2xl
+                hairline
+                bg-card
+                p-6
+                h-full
+                transition-all
+                duration-300
+                hover:-translate-y-2
+                hover:shadow-2xl
+                hover:border-primary/30
+                "
+              >
+
+                <div
+                  className="
+                  grid
+                  h-12
+                  w-12
+                  place-items-center
+                  rounded-xl
+                  bg-gradient-to-br
+                  from-gold
+                  to-yellow-300
+                  text-black
+                  shadow-lg
+                  mb-5
+                  group-hover:scale-110
+                  transition
+                  "
+                >
+
+                  <a.icon className="h-6 w-6" />
+
                 </div>
-                <div className="font-semibold">{a.title}</div>
-                <p className="text-sm text-muted-foreground mt-1">{a.desc}</p>
+
+                <h3 className="text-lg font-bold">
+
+                  {a.title}
+
+                </h3>
+
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+
+                  {a.desc}
+
+                </p>
+
+                <div className="mt-6 h-1 w-16 rounded-full bg-gradient-to-r from-gold to-yellow-400" />
+
               </div>
+
             </Reveal>
+
           ))}
+
         </div>
+
       </div>
     </section>
   );
 }
 
 /* ---------- Contact ---------- */
+
 function Contact() {
-  const [sent, setSent] = useState(false);
-  const onSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    setSent(true);
-    setTimeout(() => setSent(false), 4000);
-  };
+  const contacts = [
+    {
+      icon: Mail,
+      label: "Email",
+      value: "devarajgowda396@gmail.com",
+      href: "mailto:devarajgowda396@gmail.com",
+    },
+    {
+      icon: Phone,
+      label: "Phone",
+      value: "+91 8861266729",
+      href: "tel:+918861266729",
+    },
+    {
+      icon: Linkedin,
+      label: "LinkedIn",
+      value: "linkedin.com/in/devaraju-k-g",
+      href: "https://www.linkedin.com/in/devaraju-k-g",
+    },
+    {
+      icon: Github,
+      label: "GitHub",
+      value: "github.com/devarajukgmca021",
+      href: "https://github.com/devarajukgmca021",
+    },
+    {
+      icon: MapPin,
+      label: "Location",
+      value: "Bengaluru, Karnataka, India",
+      href: "#",
+    },
+  ];
+
   return (
     <section id="contact" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="Contact" title="Let's build something" sub="Open to software engineering, Python, AI and data roles. Always happy to discuss research collaborations." />
-        <div className="grid lg:grid-cols-[1fr_1.2fr] gap-8">
+
+        <SectionTitle
+          eyebrow="Contact"
+          title="Let's Build Something Great Together"
+          sub="Currently seeking Software Engineer, Python Developer, AI/ML, Blockchain and Data Analytics opportunities."
+        />
+
+        <div className="grid lg:grid-cols-2 gap-10">
+
           <Reveal>
-            <div className="space-y-3">
-              {[
-                { icon: Mail, label: "Email", value: "devaraju@example.com", href: "mailto:devaraju@example.com" },
-                { icon: Phone, label: "Phone", value: "+91 00000 00000", href: "tel:+910000000000" },
-                { icon: Linkedin, label: "LinkedIn", value: "/in/devarajukg", href: "https://linkedin.com" },
-                { icon: Github, label: "GitHub", value: "@devarajukg", href: "https://github.com" },
-                { icon: MapPin, label: "Location", value: "Karnataka, India", href: "#" },
-              ].map(c => (
-                <a key={c.label} href={c.href} className="flex items-center gap-4 rounded-2xl hairline bg-card p-4 hover:gold-glow transition">
-                  <div className="grid h-10 w-10 place-items-center rounded-xl bg-gradient-to-br from-gold/20 to-transparent text-gold">
+
+            <div className="space-y-4">
+
+              {contacts.map((c) => (
+
+                <a
+                  key={c.label}
+                  href={c.href}
+                  target={c.href.startsWith("http") ? "_blank" : undefined}
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-4 rounded-2xl hairline bg-card p-5 hover:gold-glow transition"
+                >
+
+                  <div className="grid h-12 w-12 place-items-center rounded-xl bg-gradient-to-br from-gold to-gold-soft text-primary-foreground">
+
                     <c.icon className="h-5 w-5" />
+
                   </div>
+
                   <div>
-                    <div className="text-xs text-muted-foreground">{c.label}</div>
-                    <div className="font-medium">{c.value}</div>
+
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground">
+
+                      {c.label}
+
+                    </div>
+
+                    <div className="font-medium">
+
+                      {c.value}
+
+                    </div>
+
                   </div>
+
                 </a>
+
               ))}
+
             </div>
+
           </Reveal>
+
           <Reveal delay={0.1}>
-            <form onSubmit={onSubmit} className="rounded-3xl hairline bg-card p-6 sm:p-8 space-y-4">
-              <div className="grid sm:grid-cols-2 gap-4">
-                <label className="block">
-                  <span className="text-xs text-muted-foreground">Name</span>
-                  <input required className="mt-1 w-full rounded-xl hairline bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40" />
-                </label>
-                <label className="block">
-                  <span className="text-xs text-muted-foreground">Email</span>
-                  <input type="email" required className="mt-1 w-full rounded-xl hairline bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40" />
-                </label>
+
+            <div className="rounded-3xl hairline bg-card p-8">
+
+              <h3 className="text-3xl font-bold">
+
+                Ready to Connect?
+
+              </h3>
+
+              <p className="mt-4 text-muted-foreground leading-relaxed">
+
+                Thank you for visiting my portfolio.
+                I am passionate about Software Development,
+                Artificial Intelligence, Blockchain and Data Analytics.
+
+                I am always open to discussing full-time opportunities,
+                innovative projects and research collaborations.
+
+              </p>
+
+              <div className="mt-8 flex flex-wrap gap-3">
+
+                <a
+                  href="/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-gold hover:opacity-90"
+                >
+                  <Download className="h-4 w-4" />
+                  View Resume
+                </a>
+
+                <a
+                  href="https://github.com/devarajukgmca021"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl hairline px-5 py-3 text-sm hover:bg-muted"
+                >
+                  <Github className="h-4 w-4" />
+                  GitHub
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/devaraju-k-g"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-xl hairline px-5 py-3 text-sm hover:bg-muted"
+                >
+                  <Linkedin className="h-4 w-4" />
+                  LinkedIn
+                </a>
+
               </div>
-              <label className="block">
-                <span className="text-xs text-muted-foreground">Subject</span>
-                <input className="mt-1 w-full rounded-xl hairline bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40" />
-              </label>
-              <label className="block">
-                <span className="text-xs text-muted-foreground">Message</span>
-                <textarea required rows={5} className="mt-1 w-full rounded-xl hairline bg-background px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-gold/40" />
-              </label>
-              <button type="submit" className="inline-flex items-center gap-2 rounded-xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground shadow-gold hover:opacity-90">
-                {sent ? "Sent ✓" : <>Send Message <Send className="h-4 w-4" /></>}
-              </button>
-            </form>
+
+            </div>
+
           </Reveal>
+
         </div>
+
       </div>
     </section>
   );
 }
 
 /* ---------- Footer ---------- */
+
 function Footer() {
   return (
     <footer className="border-t border-border py-10">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-2 text-sm">
-          <span className="grid h-7 w-7 place-items-center rounded-md bg-gradient-to-br from-gold to-gold-soft text-primary-foreground font-bold">D</span>
-          <span className="font-display font-semibold">Devaraju K G</span>
+
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+
+          <div className="flex items-center gap-3">
+
+            <span className="grid h-10 w-10 place-items-center rounded-lg bg-gradient-to-br from-gold to-gold-soft text-primary-foreground font-bold">
+
+              D
+
+            </span>
+
+            <div>
+
+              <div className="font-display font-semibold">
+
+                Devaraju K G
+
+              </div>
+
+              <div className="text-xs text-muted-foreground">
+
+                Python Developer • AI • Blockchain • Data Analytics
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div className="flex gap-6 text-sm">
+
+            <a href="/resume.pdf" target="_blank">Resume</a>
+
+            <a
+              href="https://github.com/devarajukgmca021"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/devaraju-k-g"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+          </div>
+
         </div>
-        <div className="flex gap-5 text-sm text-muted-foreground">
-          <a href="/resume.pdf" className="hover:text-foreground">Resume</a>
-          <a href="https://github.com" className="hover:text-foreground">GitHub</a>
-          <a href="https://linkedin.com" className="hover:text-foreground">LinkedIn</a>
-          <a href="mailto:devaraju@example.com" className="hover:text-foreground">Email</a>
+
+        <div className="mt-8 border-t border-border pt-6 text-center text-sm text-muted-foreground">
+
+          © {new Date().getFullYear()} Devaraju K G • Designed & Developed using React, TypeScript & Tailwind CSS
+
         </div>
-        <div className="text-xs text-muted-foreground">© {new Date().getFullYear()} Devaraju K G. All rights reserved.</div>
+
       </div>
+
     </footer>
   );
 }
