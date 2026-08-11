@@ -3,7 +3,7 @@ import { useEffect, useState, useRef, type ReactNode } from "react";
 import { motion, useScroll, useSpring, useInView, AnimatePresence } from "framer-motion";
 import {
   Moon, Sun, Github, Linkedin, Mail, Phone, MapPin, Download, ArrowUp,
-  Code2, Database, Brain, Link2, BarChart3, Wrench, Globe, Server,
+  Code2, Database, Brain, Link2, BarChart3, Wrench, Globe, Monitor, Server,
   GraduationCap, Briefcase, FileText, Award, ExternalLink, Send,
   Sparkles, ChevronRight, Menu, X, Cpu, Shield, FileBadge2, Trophy, ShieldCheck,
 } from "lucide-react";
@@ -13,9 +13,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Devaraju K G — Python Developer · AI · Blockchain · Analytics" },
-      { name: "description", content: "Final-year MCA student specializing in Python Development, Artificial Intelligence, Blockchain, Data Analytics, and Software Engineering." },
-      { property: "og:title", content: "Devaraju K G — Portfolio" },
-      { property: "og:description", content: "Python · AI · Blockchain · Data Analytics" },
+      { name: "description", content: "MCA graduate specializing in Python development, Artificial Intelligence, Blockchain, biometric systems, and Data Analytics." },
+      { property: "og:title", content: "Devaraju K G — Python Developer & AI/Blockchain Enthusiast" },
+      { property: "og:description", content: "Python · AI/ML · Blockchain · Biometric Systems · Data Analytics" },
     ],
     links: [{ rel: "canonical", href: "/" }],
   }),
@@ -172,7 +172,7 @@ function Hero() {
           <Reveal>
             <div className="inline-flex items-center gap-2 rounded-full hairline px-3 py-1 text-xs">
               <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-              Available for Full-Time Software Engineer Roles • MCA Final Year
+              Available for Full-Time Software Engineer Roles
             </div>
           </Reveal>
           <Reveal delay={0.05}>
@@ -188,11 +188,11 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.15}>
             <p className="mt-5 max-w-xl text-muted-foreground text-base sm:text-lg leading-relaxed">
-              Final-year MCA student at RNS Institute of Technology passionate about building secure, intelligent, and scalable software solutions using
+              MCA graduate from RNS Institute of Technology, Bengaluru, focused on building practical software solutions using
               <span className="text-foreground"> Python</span>,
               <span className="text-foreground"> Artificial Intelligence</span>,
               <span className="text-foreground"> Blockchain</span>, and
-              <span className="text-foreground"> Data Analytics</span>.
+              <span className="text-foreground"> Data Analytics</span>. Experienced in developing secure applications, AI-assisted systems, blockchain-based solutions, and interactive business intelligence dashboards.
             </p>
           </Reveal>
           <Reveal delay={0.2}>
@@ -210,9 +210,9 @@ function Hero() {
           </Reveal>
           <Reveal delay={0.25}>
             <div className="mt-10 flex items-center gap-5 text-muted-foreground">
-              <a href="https://github.com/devarajukgmca021" aria-label="GitHub" className="hover:text-foreground transition"><Github className="h-5 w-5" /></a>
-              <a href="https://www.linkedin.com/in/devaraju-k-g" aria-label="LinkedIn" className="hover:text-foreground transition"><Linkedin className="h-5 w-5" /></a>
-              <a href="mailto:devarajgowda396@gmail.com" aria-label="Email" className="hover:text-foreground transition"><Mail className="h-5 w-5" /></a>
+              <a href="https://github.com/Devaraju-kg" aria-label="GitHub" className="hover:text-foreground transition"><Github className="h-5 w-5" /></a>
+              <a href="https://www.linkedin.com/in/devaraju-k-g/" aria-label="LinkedIn" className="hover:text-foreground transition"><Linkedin className="h-5 w-5" /></a>
+              <a href="mailto:devarajukg.dev@gmail.com" aria-label="Email" className="hover:text-foreground transition"><Mail className="h-5 w-5" /></a>
               <div className="h-px flex-1 max-w-[120px] bg-border" />
               <span className="text-xs">Bengaluru, Karnataka, India</span>
             </div>
@@ -255,17 +255,18 @@ function Hero() {
 /* ---------- About ---------- */
 const TIMELINE = [
   { year: "2021–2024", title: "BCA", place: "Bachelor of Computer Applications, Bangalore University", icon: GraduationCap },
-  { year: "2024–2026", title: "MCA", place: "Master of Computer Applications, RNS Institute of Technology, (Current Final Year)", icon: GraduationCap },
+  { year: "2024", title: "Internship", place: "AI – Data Quality Analyst Intern, Disciples Corporate School", icon: Briefcase },
+  { year: "2024–2026", title: "MCA", place: "Master of Computer Applications, RNS Institute of Technology", icon: GraduationCap },
   { year: "2026", title: "Internship", place: "Data Analytics Intern, Anudip Foundation", icon: Briefcase },
   { year: "2026", title: "Research Paper", place: "AI-Assisted Biometric Blockchain-Based Secure Digital Voting System with Anomaly Detection · Accepted", icon: FileText },
   { year: "Now", title: "Career", place: "Open for Software Development Roles", icon: Briefcase },
 ];
 
 const STATS = [
-  { label: "CGPA", value: "8.38", suffix: "/10" },
+  { label: "CGPA", value: "8.7", suffix: "/10" },
   { label: "Research Papers", value: "1" },
-  { label: "Internships", value: "1" },
-  { label: "Major Projects", value: "3", suffix: "+" },
+  { label: "Internships", value: "2" },
+  { label: "Major Projects", value: "4", suffix: "+" },
   { label: "Technologies", value: "20", suffix: "+" },
   { label: "Programming Languages", value: "5", suffix: "+" },
 ];
@@ -274,11 +275,11 @@ function About() {
   return (
     <section id="about" className="py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <SectionTitle eyebrow="About" title="Building Intelligent Software for Real-World Problems" sub="I am a final-year Master of Computer Applications (MCA) student at RNS Institute of Technology, Bengaluru. My interests include Python Development, Artificial Intelligence, Blockchain, Backend Development, and Data Analytics. I enjoy designing secure software systems that solve real-world challenges using modern technologies." />
+        <SectionTitle eyebrow="About" title="Building Intelligent Software for Real-World Problems" sub="I am an MCA graduate from RNS Institute of Technology, Bengaluru, with a strong interest in Python development, Artificial Intelligence, Blockchain, Backend Development, and Data Analytics. I enjoy building practical software solutions that combine modern technologies with real-world problem solving." />
         <div className="grid lg:grid-cols-[1fr_1.1fr] gap-12">
           <Reveal>
             <div className="space-y-5 text-muted-foreground leading-relaxed">
-              <p>My projects focus on <span className="text-foreground">secure biometric authentication, blockchain-based voting systems, and business intelligence dashboards.</span> I continuously explore emerging technologies and enjoy turning ideas into practical software solutions.</p>
+              <p>My projects include <span className="text-foreground">secure biometric authentication, blockchain-based voting systems, AI-assisted applications, business intelligence dashboards,</span> and<span className="text-foreground">desktop software solutions.</span> I focus on writing reliable, maintainable software and continuously expanding my skills across software development and emerging technologies.</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-2">
                 {STATS.map((s) => (
                   <div key={s.label} className="rounded-2xl hairline p-4 bg-card/50">
@@ -314,14 +315,46 @@ function About() {
 
 /* ---------- Skills ---------- */
 const SKILLS = [
-  { icon: Code2, title: "Programming", items: ["Python", "C", "SQL", "Java", "JavaScript"] },
-  { icon: Globe, title: "Frontend", items: ["HTML5", "CSS3", "JavaScript", "React"] },
-  { icon: Server, title: "Backend", items: ["Flask", "FastAPI", "REST API"] },
-  { icon: Database, title: "Database", items: ["MySQL", "SQLite"] },
-  { icon: Brain, title: "AI / ML", items: ["Pandas", "NumPy", "Scikit-Learn", "OpenCV"] },
-  { icon: Link2, title: "Blockchain", items: ["Solidity", "Web3.py", "Ganache", "Smart Contracts"] },
-  { icon: BarChart3, title: "Analytics", items: ["Power BI", "Excel", "DAX", "Power Query"] },
-  { icon: Wrench, title: "Tools", items: ["Git", "GitHub", "VS Code", "Postman", "Jupyter Notebook"] },
+  {
+    icon: Code2,
+    title: "Programming",
+    items: ["Python", "C", "SQL", "Java", "JavaScript"],
+  },
+  {
+    icon: Globe,
+    title: "Frontend",
+    items: ["HTML5", "CSS3", "JavaScript"],
+  },
+  {
+    icon: Monitor,
+    title: "Application Development",
+    items: ["Python", "Tkinter", "CustomTkinter", "OOP"],
+  },
+  {
+    icon: Database,
+    title: "Database",
+    items: ["MySQL", "SQLite", "DBMS"],
+  },
+  {
+    icon: Brain,
+    title: "AI / ML",
+    items: ["Artificial Intelligence", "Machine Learning", "Pandas", "NumPy", "Scikit-Learn", "OpenCV"],
+  },
+  {
+    icon: Link2,
+    title: "Blockchain",
+    items: ["Solidity", "Web3.py", "Ganache", "Smart Contracts", "Blockchain"],
+  },
+  {
+    icon: BarChart3,
+    title: "Analytics",
+    items: ["Power BI", "Excel", "DAX", "Power Query", "Data Analysis", "Data Visualization"],
+  },
+  {
+    icon: Wrench,
+    title: "Tools",
+    items: ["Git", "GitHub", "VS Code", "Jupyter Notebook"],
+  },
 ];
 
 function Skills() {
@@ -356,54 +389,88 @@ function Skills() {
 
 /* ---------- Projects ---------- */
 type Project = {
-  title: string; tag: string; desc: string; features: string[]; stack: string[];
+  title: string; subtitle?: string; tag: string; desc: string; features: string[]; stack: string[];
   links: { label: string; href: string; icon?: typeof Github }[];
   featured?: boolean; icon: typeof Shield;
 };
 const PROJECTS: Project[] = [
   {
     title: "MATA RAKSHA",
-    tag: "Flagship Project • AI + Blockchain",
-    desc: "Developed a secure desktop-based electronic voting system integrating biometric fingerprint authentication, blockchain technology, smart contracts, and AI-assisted anomaly detection to ensure transparent, tamper-proof, and fraud-resistant elections.",
+    tag: "Flagship Project • AI + Blockchain + Biometric",
+    subtitle: "AI-Enhanced Biometric Blockchain Voting System",
+    desc: "Developed a secure desktop-based electronic voting system integrating biometric fingerprint authentication, blockchain-based vote recording, smart contracts, and AI-assisted analysis. The system supports voter registration, fingerprint enrollment and verification, election creation, candidate management, secure vote casting, result generation, audit logs, vote history, and district-wise elections.",
     features: [
-"Fingerprint Authentication",
-"Blockchain Vote Storage",
-"Smart Contract Integration",
-"AI Anomaly Detection",
-"Role-Based Access Control",
-"Election Management",
-"Candidate Management",
-"Real-Time Vote Counting"
+      "Fingerprint Authentication",
+      "Fingerprint Enrollment",
+      "Blockchain Vote Storage",
+      "Smart Contract Integration",
+      "Role-Based Access Control",
+      "Election Management",
+      "Candidate Management",
+      "Secure Vote Casting",
+      "Result Generation",
+      "Audit Logs",
+      "Vote History",
+      "District-wise Elections"
 ],
     stack: [
-"Python",
-"SQLite",
-"Web3.py",
-"Ganache",
-"Solidity",
-"CustomTkinter",
-"Scikit-learn"
+      "Python",
+      "CustomTkinter",
+      "SQLite",
+      "SecuGen",
+      "Web3.py",
+      "Ganache",
+      "Solidity",
+      "Scikit-learn"
 ],
     links: [
-      { label: "GitHub", href: "https://github.com/devarajukgmca021/MATA-RAKSHA", icon: Github },
-      { label: "Architecture", href: "#" },
-      { label: "Docs", href: "#" },
+      { label: "GitHub", href: "https://github.com/Devaraju-kg/MATA-RAKSHA", icon: Github },
+      { label: "Architecture", href: "/architecture.png" },
+      { label: "Docs", href: "/mata_raksha_report.pdf" },
     ],
     featured: true,
     icon: Shield,
   },
   {
     title: "Credit Risk Analytics Dashboard",
-    tag: "Internship Project • Business Intelligence",
-    desc: "Designed an interactive Power BI dashboard to analyze customer credit risk using Python, SQL, Power BI, DAX, and Excel for business intelligence and data-driven decision-making.",
-    features: ["Customer segmentation", "Credit Risk Analysis", "Interactive Dashboards", "DAX Measures", "Power Query", "Data Cleaning"],
-    stack: ["Power BI", "Python", "MySQL", "DAX", "Excel"],
-    links: [{ label: "GitHub", href: "https://github.com/devarajukgmca021/Credit-Risk-Analytics-Dashboard", icon: Github }],
+    tag: "Data Analytics • Business Intelligence",
+    desc: "Developed an interactive credit risk analytics dashboard to analyze customer profiles, loan characteristics, repayment behavior, and credit risk patterns using data analysis and business intelligence techniques.",
+    features: ["Customer segmentation", "Credit Risk Analysis", "KPI Development", "Interactive Dashboards", "DAX Measures", "Power Query", "Data Cleaning"],
+    stack: ["Power BI", "Python", "MySQL", "DAX", "Excel", "Power Query"],
+    links: [{ label: "GitHub", href: "https://github.com/Devaraju-kg/Credit-Risk-Analytics-Dashboard", icon: Github }],
+    icon: BarChart3,
+  },
+    {
+    title: "Netflix Power BI Dashboard",
+    tag: "Data Analytics • Power BI",
+    desc: "Developed an interactive Netflix content analytics dashboard to explore movies and TV shows using content type, genre, country, rating, release year, and other attributes.",
+    features: [
+      "Content Analysis",
+      "Genre Analysis",
+      "Country Analysis",
+      "Release Year Trends",
+      "Interactive Visualizations",
+      "KPI Analysis"
+    ],
+    stack: [
+      "Power BI",
+      "Excel",
+      "Power Query",
+      "DAX",
+      "Data Visualization"
+    ],
+    links: [
+      {
+        label: "GitHub",
+        href: "https://github.com/Devaraju-kg/Netflix_Powerbi_Dashboard",
+        icon: Github
+      }
+    ],
     icon: BarChart3,
   },
   {
     title: "Smart Hotel Management System",
-    tag: "Desktop App",
+    tag: "Desktop Application",
     desc: "Developed a desktop-based hotel management application for room booking, guest management, billing, staff administration, and reporting with an intuitive user interface.",
     features: ["Room Booking", "Billing", "Guest Management", "Reports", "Authentication", "Database Management"],
     stack: ["Python", "Tkinter", "SQLite", "OOP"],
@@ -446,7 +513,14 @@ function Projects() {
                   <div className="inline-flex items-center gap-2 text-xs font-medium text-gold uppercase tracking-wider">
                     <p.icon className="h-4 w-4" /> {p.tag}
                   </div>
-                  <h3 className="mt-3 text-3xl sm:text-4xl font-bold">{p.title}</h3>
+                  <h3 className="mt-3 text-3xl sm:text-4xl font-bold">
+                  {p.title}
+                  {p.subtitle && (
+                    <span className="block mt-1 text-base sm:text-lg font-normal text-muted-foreground">
+                    {p.subtitle}
+                    </span>
+                  )}
+                  </h3>
                   <p className="mt-4 text-muted-foreground leading-relaxed">{p.desc}</p>
                   <ul className="mt-5 grid grid-cols-2 gap-2 text-sm">
                     {p.features.map((f) => (
@@ -539,13 +613,8 @@ function Research() {
 
               <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 px-3 py-1 text-xs font-medium">
                 <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-                Conference Accepted
+                Research Paper
               </span>
-
-              <span className="rounded-full hairline px-3 py-1 text-xs text-muted-foreground">
-                Registration on Hold
-              </span>
-
             </div>
 
             <h3 className="text-2xl sm:text-3xl font-bold leading-tight max-w-4xl">
@@ -607,7 +676,7 @@ function Research() {
               </a>
 
               <a
-                href="https://github.com/devarajukgmca021/MATA-RAKSHA"
+                href="https://github.com/Devaraju-kg/MATA-RAKSHA"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
@@ -634,10 +703,10 @@ function Experience() {
 
         <SectionTitle
           eyebrow="Experience"
-          title="Professional Experience"
-          sub="Hands-on experience in data analytics, business intelligence and dashboard development."
+          title="Internships"
+          sub="Practical experience gained through academic and industry-oriented internship programs."
         />
-
+        {/* Internship 1 — Anudip Foundation */}
         <Reveal>
           <div className="rounded-3xl hairline bg-card p-6 sm:p-10 grid lg:grid-cols-[1fr_2fr] gap-8">
 
@@ -668,6 +737,7 @@ function Experience() {
                   "MySQL",
                   "Excel",
                   "DAX",
+                  "Data Visualization",
                 ].map((s) => (
                   <span
                     key={s}
@@ -723,7 +793,7 @@ function Experience() {
               <div className="mt-8 flex flex-wrap gap-3">
 
                 <a
-                  href="https://github.com/devarajukgmca021/Credit-Risk-Analytics-Dashboard"
+                  href="https://github.com/Devaraju-kg/Credit-Risk-Analytics-Dashboard"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-lg hairline px-4 py-2 text-sm hover:bg-muted"
@@ -758,6 +828,84 @@ function Experience() {
 
           </div>
         </Reveal>
+          {/* Internship 2 — Disciples Corporate School */}
+          <Reveal>
+            <div className="rounded-3xl hairline bg-card p-6 sm:p-10 grid lg:grid-cols-[1fr_2fr] gap-8">
+
+              {/* Left Side */}
+              <div>
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-gradient-to-br from-gold to-gold-soft text-primary-foreground shadow-gold mb-4">
+                  <Briefcase className="h-6 w-6" />
+                </div>
+
+                <div className="text-xs text-muted-foreground font-mono">
+                  Feb 2024 – Apr 2024
+                </div>
+
+                <h3 className="mt-2 text-xl font-bold">
+                  AI – Data Quality Analyst Intern
+                </h3>
+
+                <div className="text-sm text-muted-foreground">
+                  Disciples Corporate School
+                </div>
+
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {[
+                    "Artificial Intelligence",
+                    "Data Quality",
+                    "Data Analysis",
+                  ].map((s) => (
+                    <span
+                      key={s}
+                      className="text-xs px-2 py-1 rounded-md bg-muted font-mono"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right Side */}
+              <div>
+                <h4 className="font-semibold text-lg">
+                  AI – Data Quality Analysis
+                </h4>
+
+                <p className="mt-3 text-muted-foreground leading-relaxed">
+                  Completed an internship as an AI – Data Quality Analyst
+                  during my BCA studies, gaining practical exposure to data
+                  quality analysis and AI-related data workflows.
+                </p>
+
+                <ul className="mt-5 space-y-3 text-sm text-muted-foreground">
+                  {[
+                    "Worked on data quality analysis.",
+                    "Gained practical exposure to AI-related data workflows.",
+                    "Developed understanding of data quality and analysis processes.",
+                  ].map((item) => (
+                    <li key={item} className="flex gap-2">
+                      <ChevronRight className="h-4 w-4 text-gold mt-1 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="/Internship_Certificate2.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground"
+                >
+                  <Award className="h-4 w-4" />
+                  Completion Certificate
+                </a>
+
+              </div>
+            </div>
+
+          </div>
+          </Reveal>
 
       </div>
     </section>
@@ -880,7 +1028,7 @@ function Achievements() {
 
     {
       label: "Internships",
-      to: 1,
+      to: 2,
     },
 
     {
@@ -1032,8 +1180,8 @@ function Contact() {
     {
       icon: Mail,
       label: "Email",
-      value: "devarajgowda396@gmail.com",
-      href: "mailto:devarajgowda396@gmail.com",
+      value: "devarajukg.dev@gmail.com",
+      href: "mailto:devarajukg.dev@gmail.com",
     },
     {
       icon: Phone,
@@ -1051,7 +1199,7 @@ function Contact() {
       icon: Github,
       label: "GitHub",
       value: "github.com/devarajukgmca021",
-      href: "https://github.com/devarajukgmca021",
+      href: "https://github.com/Devaraju-kg",
     },
     {
       icon: MapPin,
@@ -1151,7 +1299,7 @@ function Contact() {
                 </a>
 
                 <a
-                  href="https://github.com/devarajukgmca021"
+                  href="https://github.com/Devaraju-kg"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 rounded-xl hairline px-5 py-3 text-sm hover:bg-muted"
@@ -1224,7 +1372,7 @@ function Footer() {
             <a href="/resume.pdf" target="_blank">Resume</a>
 
             <a
-              href="https://github.com/devarajukgmca021"
+              href="https://github.com/Devaraju-kg"
               target="_blank"
               rel="noopener noreferrer"
             >
