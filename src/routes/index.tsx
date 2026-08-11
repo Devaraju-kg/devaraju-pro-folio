@@ -1198,7 +1198,7 @@ function Contact() {
     {
       icon: Github,
       label: "GitHub",
-      value: "github.com/devarajukgmca021",
+      value: "github.com/Devaraju-kg",
       href: "https://github.com/Devaraju-kg",
     },
     {
